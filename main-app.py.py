@@ -12,7 +12,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 # ==========================================
 st.set_page_config(
     page_title="UAV Energy Consumption & EDA Dashboard",
-    page_icon="🛸",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -22,7 +22,7 @@ st.markdown("""
 <style>
     /* Animated Gradient Background */
     .stApp {
-        background: linear-gradient(-45deg, #0047AB, #000080, #0F52BA, #007BA7);
+        background: linear-gradient(-45deg, #111184, #0047AB, #000080, #0F52BA, #007BA7);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
         color: #f8fafc;
@@ -65,7 +65,7 @@ def load_and_train_model():
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
     model = xgb.XGBRegressor(
-        n_estimators=100,
+        n_estimators=120,
         learning_rate=0.1,
         max_depth=5,
         random_state=42
