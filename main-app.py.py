@@ -93,7 +93,7 @@ except FileNotFoundError:
 # ==========================================
 # 3. NAVIGATION & SIDEBAR INPUT BOXES
 # ==========================================
-st.sidebar.title("🛸 UAV Control Panel")
+st.sidebar.title("UAV Control Panel")
 app_mode = st.sidebar.radio("Navigate", ["Energy Prediction", "Exploratory Data Analysis (EDA)"])
 
 st.sidebar.markdown("---")
