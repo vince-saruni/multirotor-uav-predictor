@@ -143,9 +143,9 @@ if app_mode == "Energy Prediction":
             input_df = pd.DataFrame([user_inputs])
             prediction = model.predict(input_df)[0]
 
-            if (100 - prediction) >= 30:
+            if (0.0, 100.0 - prediction) >= 30:
                 st.success("Calculation Complete! The Mission is NOT feasible")
-            elif (100 - prediction) <= 30:
+            elif (0.0, 100.0 - prediction) <= 30:
                 st.success("Calculation Complete! The Mission is feasible")
             
             p_col1, p_col2 = st.columns(2)
