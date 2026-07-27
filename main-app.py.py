@@ -22,7 +22,7 @@ st.markdown("""
 <style>
     /* Animated Gradient Background */
     .stApp {
-        background: linear-gradient(-45deg, #98A869);
+        background: linear-gradient(-45deg, #0047AB, #000080, #0F52BA, #007BA7);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
         color: #f8fafc;
