@@ -142,8 +142,11 @@ if app_mode == "Energy Prediction":
         if st.button("Calculate Battery Consumption", type="primary", use_container_width=True):
             input_df = pd.DataFrame([user_inputs])
             prediction = model.predict(input_df)[0]
-            
-            st.success("Calculation Complete!")
+
+            if prediction => 30:
+                st.success("Calculation Complete! The Mission is NOT feasible")
+            elif prediction =< 30:
+                st.success("Calculation Complete! The Mission is feasible")
             
             p_col1, p_col2 = st.columns(2)
             p_col1.metric(
