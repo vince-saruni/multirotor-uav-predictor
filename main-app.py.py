@@ -86,7 +86,7 @@ def load_and_train_model():
 try:
     df, model, feature_names, metrics = load_and_train_model()
 except FileNotFoundError:
-    st.error("⚠️ Dataset file `Comprehensive_Data_1_025454.csv` not found. Please upload it to your workspace.")
+    st.error("Dataset file `Comprehensive_Data_1_025454.csv` not found. Please upload it to your workspace.")
     st.stop()
 
 
@@ -123,20 +123,20 @@ for col in feature_names:
 # 4. VIEW 1: PREDICTION DASHBOARD
 # ==========================================
 if app_mode == "Energy Prediction":
-    st.title("🔋 Multirotor UAV Battery Consumption Predictor")
+    st.title("Multirotor UAV Battery Consumption Predictor")
     st.markdown("Enter flight parameters in the input boxes on the sidebar to estimate battery consumption.")
 
     col1, col2 = st.columns([1, 1])
 
     with col1:
-        st.subheader("🤖 Model Performance Metrics")
+        st.subheader("Model Performance Metrics")
         m_col1, m_col2, m_col3 = st.columns(3)
         m_col1.metric("R² Accuracy Score", f"{metrics['r2'] * 100:.2f}%")
         m_col2.metric("RMSE", f"{metrics['rmse']:.3f}%")
         m_col3.metric("MAE", f"{metrics['mae']:.3f}%")
 
         st.markdown("---")
-        st.subheader("🎯 Run Prediction")
+        st.subheader("Run Prediction")
         
         # Trigger prediction button
         if st.button("Calculate Battery Consumption", type="primary", use_container_width=True):
@@ -169,10 +169,10 @@ if app_mode == "Energy Prediction":
 # 5. VIEW 2: EDA DASHBOARD
 # ==========================================
 else:
-    st.title("📊 Exploratory Data Analysis (EDA)")
+    st.title("Exploratory Data Analysis (EDA)")
     st.markdown("Explore dataset distributions, feature correlations, and spread across variables.")
 
-    eda_tab1, eda_tab2, eda_tab3 = st.tabs(["🔥 Correlation Heatmap", "📈 Histograms", "📦 Boxplots"])
+    eda_tab1, eda_tab2, eda_tab3 = st.tabs(["Correlation Heatmap", "Histograms", "Boxplots"])
 
     # Seaborn Style Configuration for Dark Background
     plt.style.use('dark_background')
