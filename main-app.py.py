@@ -22,7 +22,7 @@ st.markdown("""
 <style>
     /* Animated Gradient Background */
     .stApp {
-        background: linear-gradient(-45deg, #0f172a, #1e1b4b, #311042, #0f172a);
+        background: linear-gradient(-45deg, #98A869);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
         color: #f8fafc;
@@ -160,7 +160,7 @@ if app_mode == "Energy Prediction":
             st.progress(min(max(float(prediction) / 100.0, 0.0), 1.0))
 
     with col2:
-        st.subheader("⚙️ Active Mission Configuration")
+        st.subheader("Active Mission Configuration")
         input_summary = pd.DataFrame(list(user_inputs.items()), columns=["Parameter", "Entered Value"])
         st.dataframe(input_summary, use_container_width=True, height=400)
 
