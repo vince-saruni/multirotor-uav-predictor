@@ -23,6 +23,7 @@ st.markdown("""
     /* Animated Gradient Background */
     .stApp {
         background: linear-gradient(-45deg, #111184, #0047AB, #000080, #0F52BA, #007BA7);
+        background-img: https://github.com/vince-saruni/multirotor-uav-predictor/blob/main/3d-rendering-flowers.jpg
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
         color: #f8fafc;
