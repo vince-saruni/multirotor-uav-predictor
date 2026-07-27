@@ -144,7 +144,7 @@ if app_mode == "Energy Prediction":
             prediction = model.predict(input_df)[0]
 
             if (100.0 - prediction) >= 30:
-                st.success("Calculation Complete! The Mission is feasible")
+                st.success("Calculation Complete! {100-prediction}The Mission is feasible")
             elif (100.0 - prediction) <= 30:
                 st.success("Calculation Complete! The Mission is NOT feasible")
             
